@@ -133,12 +133,12 @@ open class SVGParser {
     }
 
     fileprivate func parse() throws -> Group {
-        let config = SWXMLHash.config { config in
+        let config = XMLHash.config { config in
             config.shouldProcessNamespaces = true
         }
         let parsedXml = config.parse(xmlString)
 
-        var svgElement: SWXMLHash.XMLElement?
+        var svgElement: XMLHash.XMLElement?
         for child in parsedXml.children {
             if let element = child.element {
                 if element.name == "svg" {
