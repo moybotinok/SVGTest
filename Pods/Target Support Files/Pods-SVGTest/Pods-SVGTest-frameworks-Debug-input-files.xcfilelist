@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-SVGTest/Pods-SVGTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
+${BUILT_PRODUCTS_DIR}/SVGParser/SVGParser.framework
+${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework
+${BUILT_PRODUCTS_DIR}/SwiftSVG/SwiftSVG.framework
