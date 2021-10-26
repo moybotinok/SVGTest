@@ -82,7 +82,7 @@
  
  BOOL attributesFound = NO;
  NSMutableDictionary *buildDictionary = [NSMutableDictionary new];
- for( Node* node in self.attributes )
+ for(SVGKNode * node in self.attributes )
  {
  if( ![node.localName isEqualToString:@"opacity"] )
  {

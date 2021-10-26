@@ -25,7 +25,7 @@ public class SVGParser: NSObject {
     
     public func printTime(startTime: Date, string: String) {
         let tsp = Date().timeIntervalSince(startTime)
-        let prefix = String(format: "SVGParser %.3fs ", tsp)
+        let prefix = String(format: "lib_SVGParser %.3fs ", tsp)
         let str = "\(prefix)- \(string)"
         Swift.print(str)
     }

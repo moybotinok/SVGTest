@@ -20,7 +20,7 @@
 #import "Node.h"
 #import "NamedNodeMap.h"
 
-@interface DocumentType : Node
+@interface DocumentType : SVGKNode
 
 @property(nonatomic,strong,readonly) NSString* name;
 @property(nonatomic,strong,readonly) NamedNodeMap* entities;

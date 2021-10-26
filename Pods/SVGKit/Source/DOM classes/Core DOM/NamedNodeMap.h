@@ -3,22 +3,22 @@
  
  http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922
  
- interface NamedNodeMap {
- Node               getNamedItem(in DOMString name);
- Node               setNamedItem(in Node arg)
+ interface NamedSVGKNodeMap {
+ SVGKNode               getNamedItem(in DOMString name);
+ SVGKNode               setNamedItem(in SVGKNode arg)
  raises(DOMException);
- Node               removeNamedItem(in DOMString name)
+ SVGKNode               removeNamedItem(in DOMString name)
  raises(DOMException);
- Node               item(in unsigned long index);
+ SVGKNode               item(in unsigned long index);
  readonly attribute unsigned long    length;
  // Introduced in DOM Level 2:
- Node               getNamedItemNS(in DOMString namespaceURI, 
+ SVGKNode               getNamedItemNS(in DOMString namespaceURI,
  in DOMString localName);
  // Introduced in DOM Level 2:
- Node               setNamedItemNS(in Node arg)
+ SVGKNode               setNamedItemNS(in SVGKNode arg)
  raises(DOMException);
  // Introduced in DOM Level 2:
- Node               removeNamedItemNS(in DOMString namespaceURI, 
+ SVGKNode               removeNamedItemNS(in DOMString namespaceURI,
  in DOMString localName)
  raises(DOMException);
  };
@@ -27,29 +27,29 @@
 
 #import <Foundation/Foundation.h>
 
-@class Node;
+@class SVGKNode;
 #import "Node.h"
 
-@interface NamedNodeMap : NSObject </** needed so we can output SVG text in the [Node appendToXML:..] methods */ NSCopying>
+@interface NamedNodeMap : NSObject </** needed so we can output SVG text in the [SVGKNode appendToXML:..] methods */ NSCopying>
 
--(Node*) getNamedItem:(NSString*) name;
--(Node*) setNamedItem:(Node*) arg;
--(Node*) removeNamedItem:(NSString*) name;
--(Node*) item:(unsigned long) index;
+-(SVGKNode*) getNamedItem:(NSString*) name;
+-(SVGKNode*) setNamedItem:(SVGKNode*) arg;
+-(SVGKNode*) removeNamedItem:(NSString*) name;
+-(SVGKNode*) item:(unsigned long) index;
 
 @property(readonly) unsigned long length;
 
 // Introduced in DOM Level 2:
--(Node*) getNamedItemNS:(NSString*) namespaceURI localName:(NSString*) localName;
+-(SVGKNode*) getNamedItemNS:(NSString*) namespaceURI localName:(NSString*) localName;
 
 // Introduced in DOM Level 2:
--(Node*) setNamedItemNS:(Node*) arg;
+-(SVGKNode*) setNamedItemNS:(SVGKNode*) arg;
 
 // Introduced in DOM Level 2:
--(Node*) removeNamedItemNS:(NSString*) namespaceURI localName:(NSString*) localName;
+-(SVGKNode*) removeNamedItemNS:(NSString*) namespaceURI localName:(NSString*) localName;
 
 #pragma mark - MISSING METHOD FROM SVG Spec, without which you cannot parse documents (don't understand how they intended you to fulfil the spec without this method)
 
--(Node*) setNamedItemNS:(Node*) arg inNodeNamespace:(NSString*) nodesNamespace;
+-(SVGKNode*) setNamedItemNS:(SVGKNode*) arg inNodeNamespace:(NSString*) nodesNamespace;
 
 @end

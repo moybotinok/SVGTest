@@ -75,7 +75,7 @@
 @class AppleSucksDOMImplementation;
 #import "AppleSucksDOMImplementation.h"
 
-@interface Document : Node
+@interface Document : SVGKNode
 
 @property(nonatomic,strong,readonly) DocumentType*     doctype;
 @property(nonatomic,strong,readonly) AppleSucksDOMImplementation*  implementation;
@@ -94,7 +94,7 @@
 -(NodeList*) getElementsByTagName:(NSString*) data;
 
 // Introduced in DOM Level 2:
--(Node*) importNode:(Node*) importedNode deep:(BOOL) deep;
+-(SVGKNode*) importNode:(SVGKNode*) importedNode deep:(BOOL) deep;
 
 // Introduced in DOM Level 2:
 -(Element*) createElementNS:(NSString*) namespaceURI qualifiedName:(NSString*) qualifiedName __attribute__((ns_returns_retained));

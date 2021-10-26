@@ -55,7 +55,7 @@
 @class NodeList;
 #import "NodeList.h"
 
-@interface Element : Node
+@interface Element : SVGKNode
 
 @property(nonatomic,strong,readonly) NSString* tagName;
 

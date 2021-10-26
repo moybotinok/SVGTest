@@ -3,12 +3,12 @@
  */
 #import "Node.h"
 
-@interface Node()
+@interface SVGKNode()
 @property(nonatomic,strong,readwrite) NSString* nodeName;
 @property(nonatomic,strong,readwrite) NSString* nodeValue;
 
 @property(nonatomic,readwrite) DOMNodeType nodeType;
-@property(nonatomic,weak,readwrite) Node* parentNode;
+@property(nonatomic,weak,readwrite) SVGKNode* parentNode;
 @property(nonatomic,strong,readwrite) NodeList* childNodes;
 @property(nonatomic,strong,readwrite) NamedNodeMap* attributes;
 

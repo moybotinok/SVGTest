@@ -16,7 +16,7 @@
 /** objc won't allow this: @class Node;*/
 #import "Node.h"
 
-@interface ProcessingInstruction : Node
+@interface ProcessingInstruction : SVGKNode
 @property(nonatomic,strong,readonly) NSString* target;
 @property(nonatomic,strong,readonly) NSString* data;
 

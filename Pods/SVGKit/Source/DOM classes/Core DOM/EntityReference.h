@@ -11,6 +11,6 @@
 /** objc won't allow this: @class Node; */
 #import "Node.h"
 
-@interface EntityReference : Node
+@interface EntityReference : SVGKNode
 
 @end

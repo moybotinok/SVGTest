@@ -99,32 +99,32 @@ typedef enum DOMNodeType
 	DOMNodeType_NOTATION_NODE                  = 12
 } DOMNodeType;
 
-@interface Node : NSObject
+@interface SVGKNode : NSObject
 
 @property(nonatomic,strong,readonly) NSString* nodeName;
 @property(nonatomic,strong,readonly) NSString* nodeValue;
 	
 @property(nonatomic,readonly) DOMNodeType nodeType;
-@property(nonatomic,weak,readonly) Node* parentNode;
+@property(nonatomic,weak,readonly) SVGKNode* parentNode;
 @property(nonatomic,strong,readonly) NodeList* childNodes;
-@property(nonatomic,weak,readonly) Node* firstChild;
-@property(nonatomic,weak,readonly) Node* lastChild;
-@property(nonatomic,weak,readonly) Node* previousSibling;
-@property(nonatomic,weak,readonly) Node* nextSibling;
+@property(nonatomic,weak,readonly) SVGKNode* firstChild;
+@property(nonatomic,weak,readonly) SVGKNode* lastChild;
+@property(nonatomic,weak,readonly) SVGKNode* previousSibling;
+@property(nonatomic,weak,readonly) SVGKNode* nextSibling;
 @property(nonatomic,strong,readonly) NamedNodeMap* attributes; /**< NB: according to DOM Spec, this is null if the Node is NOT subclassed as an Element */
 
 // Modified in DOM Level 2:
 @property(nonatomic,weak,readonly) Document* ownerDocument;
 
--(Node*) insertBefore:(Node*) newChild refChild:(Node*) refChild;
+-(SVGKNode*) insertBefore:(SVGKNode*) newChild refChild:(SVGKNode*) refChild;
 
--(Node*) replaceChild:(Node*) newChild oldChild:(Node*) oldChild;
--(Node*) removeChild:(Node*) oldChild;
--(Node*) appendChild:(Node*) newChild;
+-(SVGKNode*) replaceChild:(SVGKNode*) newChild oldChild:(SVGKNode*) oldChild;
+-(SVGKNode*) removeChild:(SVGKNode*) oldChild;
+-(SVGKNode*) appendChild:(SVGKNode*) newChild;
 
 @property(nonatomic) BOOL hasChildNodes;
 
--(Node*) cloneNode:(BOOL) deep;
+-(SVGKNode*) cloneNode:(BOOL) deep;
 
 // Modified in DOM Level 2:
 -(void) normalize;
