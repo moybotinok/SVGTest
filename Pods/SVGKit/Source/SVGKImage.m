@@ -328,12 +328,18 @@ static NSMutableDictionary* globalSVGKImageCache;
 	}
     return self;
 }
+- (void)printTimeWithStartTime: (NSDate *) startDate string: (NSString *)string {
+    NSTimeInterval tsp = [[NSDate date] timeIntervalSinceDate:startDate];
+    NSString *str = [NSString stringWithFormat: @"lib_SVGKit %.3fs %@", tsp, string];
+    NSLog(str);
+}
 
 - (id)initWithSource:(SVGKSource *)newSource {
 	NSAssert( newSource != nil, @"Attempted to init an SVGKImage using a nil SVGKSource");
 	
+    NSDate *d = [NSDate date];
 	self = [self initWithParsedSVG:[SVGKParser parseSourceUsingDefaultSVGKParser:newSource] fromSource:newSource];
-	
+    [self printTimeWithStartTime:d string: @"parseSource "];
 	return self;
 }
 

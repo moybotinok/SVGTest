@@ -7,15 +7,21 @@
 {
 	return [self.URL absoluteString];
 }
-
++ (void)printTimeWithStartTime: (NSDate *) startDate string: (NSString *)string {
+    NSTimeInterval tsp = [[NSDate date] timeIntervalSinceDate:startDate];
+    NSString *str = [NSString stringWithFormat: @"lib_SVGKit %.3fs %@", tsp, string];
+    NSLog(str);
+}
 + (SVGKSource*)sourceFromURL:(NSURL*)u {
-	NSInputStream* stream = [self internalCreateInputStreamFromURL:u];
+//    NSDate *d = [NSDate date];
+    NSInputStream* stream = [self internalCreateInputStreamFromURL:u];
     if (!stream) {
         return nil;
     }
-	
-	SVGKSourceURL* s = [[SVGKSourceURL alloc] initWithInputSteam:stream];
-	s.URL = u;
+    
+    SVGKSourceURL* s = [[SVGKSourceURL alloc] initWithInputSteam:stream];
+    s.URL = u;
+//    [self printTimeWithStartTime:d string: @" sourceFromURL"];
 	
 	return s;
 }
@@ -34,7 +40,9 @@
 		 
 		 NB: current Apple docs don't seem to mention this - certainly not in the inputStreamWithURL: method? */
 		NSError* errorWithNSData;
-		NSData *tempData = [NSData dataWithContentsOfURL:u options:0 error:&errorWithNSData];
+        NSDate *d = [NSDate date];
+        NSData *tempData = [NSData dataWithContentsOfURL:u options:0 error:&errorWithNSData];
+        [self printTimeWithStartTime:d string: @"dataWithContentsOfURL"];
 		
 		if( tempData == nil )
 		{

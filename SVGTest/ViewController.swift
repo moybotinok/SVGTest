@@ -7,6 +7,7 @@
 
 import UIKit
 import Macaw
+import SVGKit
 import SVGParser
 
 extension UIViewController {
@@ -20,8 +21,10 @@ extension UIViewController {
 
 class ViewController: UIViewController {
 
-    let urlString = "https://www.avito.st/s/common/components/monetization/icons/web/x5_1.svg"
+//    let urlString = "https://www.avito.st/s/common/components/monetization/icons/web/x5_1.svg"
+    let urlString = "https://www.avito.st/s/common/components/monetization/bundles/au/01/mid-medium.svg"
     var macawView: SVGView!
+    var svgkImage: MySVGKFastImageView! //SVGKFastImageView! //SVGKImage!
     var svgParserImageView: UIImageView!
     
     override func viewDidLoad() {
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
         }
         
         testMacaw(url: url)
+        testSvgkImage(url: url)
         testSVGParser(url: url)
     }
 
@@ -51,6 +55,23 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.macawView.fileString(s: string)
+            }
+        }
+    }
+    
+    func testSvgkImage(url: URL) {
+//        DispatchQueue.global().async { [weak self] in
+        DispatchQueue.main.async { [weak self] in
+        
+            let s = Date()
+            let i = SVGKImage(contentsOf: url)
+            self?.printTime(startTime: s, string: "SVGKit image")
+            
+            DispatchQueue.main.async {
+                self?.svgkImage = MySVGKFastImageView(svgkImage: i)
+                
+                self?.view.addSubview(self!.svgkImage)
+                self?.svgkImage.frame = CGRect(x: 0, y: 200, width: 100, height: 100)
             }
         }
     }
@@ -78,3 +99,10 @@ extension SVGView {
     }
 }
 
+class MySVGKFastImageView: SVGKFastImageView {
+    override func draw(_ rect: CGRect) {
+        let s = Date()
+        super.draw(rect)
+        UIViewController().printTime(startTime: s, string: "SVGKFastImageView drawRect")
+    }
+}
