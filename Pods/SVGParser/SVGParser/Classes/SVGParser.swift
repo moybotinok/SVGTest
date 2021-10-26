@@ -23,6 +23,13 @@ public class SVGWebView: UIWebView {
 
 public class SVGParser: NSObject {
     
+    public func printTime(startTime: Date, string: String) {
+        let tsp = Date().timeIntervalSince(startTime)
+        let prefix = String(format: "SVGParser %.3fs ", tsp)
+        let str = "\(prefix)- \(string)"
+        Swift.print(str)
+    }
+    
     public init(xmlData: Data) {
         super.init()
         initializeWith(data: xmlData)
@@ -38,7 +45,9 @@ public class SVGParser: NSObject {
     public init(contentsOfURL: URL) {
         super.init()
         do {
+            let s = Date()
             let data = try Data(contentsOf: contentsOfURL)
+            printTime(startTime: s, string: "load data(contentsOf url)")
             initializeWith(data: data)
         } catch {
             print("Unable to load data: \(error)")
@@ -75,12 +84,14 @@ public class SVGParser: NSObject {
         
         uiWebViewWithImageDrawnInSize(size, originalImageSize: nil) { (webView, svgSize) in
             DispatchQueue.main.async {
+                let s = Date()
                 UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
                 if let currentContext = UIGraphicsGetCurrentContext() {
                     webView.layer.render(in: currentContext)
                 }
                 if let image = UIGraphicsGetImageFromCurrentImageContext() {
                     UIGraphicsEndImageContext()
+                    self.printTime(startTime: s, string: "draw in context")
                     completion(image)
                 }
             }
@@ -92,6 +103,7 @@ public class SVGParser: NSObject {
         assert(Thread.isMainThread, "This method should be called only on main thread")
         
         // Create WebView
+        let s = Date()
         let webView = SVGWebView(frame: CGRect(origin: CGPoint.zero, size: size))
         webView.isOpaque = false
         webView.backgroundColor = UIColor.clear
@@ -116,6 +128,7 @@ public class SVGParser: NSObject {
                 let imageElement = jsContext.globalObject.objectForKeyedSubscript("document")?.objectForKeyedSubscript("images")?.objectAtIndexedSubscript(0)
                 let width = imageElement?.objectForKeyedSubscript("naturalWidth")?.toDouble()
                 let height = imageElement?.objectForKeyedSubscript("naturalHeight")?.toDouble()
+                self.printTime(startTime: s, string: "load script")
                 completion(webView, CGSize(width: width ?? Double(size.width), height: height ?? Double(size.height)))
             }
             
