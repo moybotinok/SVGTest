@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack" "${PODS_CONFIGURATION_BUILD_DIR}/Macaw" "${PODS_CONFIGURATION_BUILD_DIR}/SVGKit" "${PODS_CONFIGURATION_BUILD_DIR}/SVGParser" "${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack" "${PODS_CONFIGURATION_BUILD_DIR}/Macaw" "${PODS_CONFIGURATION_BUILD_DIR}/PocketSVG" "${PODS_CONFIGURATION_BUILD_DIR}/SVGKit" "${PODS_CONFIGURATION_BUILD_DIR}/SVGParser" "${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Macaw/Macaw.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SVGKit/SVGKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SVGParser/SVGParser.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash/SWXMLHash.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG/SwiftSVG.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Macaw/Macaw.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PocketSVG/PocketSVG.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SVGKit/SVGKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SVGParser/SVGParser.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash/SWXMLHash.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG/SwiftSVG.framework/Headers" $(SDKROOT)/usr/include/libxml2
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -l"xml2" -framework "CocoaLumberjack" -framework "CoreText" -framework "Macaw" -framework "QuartzCore" -framework "SVGKit" -framework "SVGParser" -framework "SWXMLHash" -framework "SwiftSVG"
+OTHER_LDFLAGS = $(inherited) -l"stdc++" -l"xml2" -framework "CocoaLumberjack" -framework "CoreText" -framework "Macaw" -framework "PocketSVG" -framework "QuartzCore" -framework "SVGKit" -framework "SVGParser" -framework "SWXMLHash" -framework "SwiftSVG"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

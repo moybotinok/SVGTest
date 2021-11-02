@@ -4,6 +4,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.2)
   - Macaw (0.9.7):
     - SWXMLHash
+  - PocketSVG (2.7.0)
   - SVGKit (3.1.0):
     - CocoaLumberjack (~> 3.0)
   - SVGParser (0.2.1)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Macaw (= 0.9.7)
+  - PocketSVG (~> 2.6)
   - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `3.x`)
   - SVGParser
   - SwiftSVG (~> 2.0)
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - CocoaLumberjack
     - Macaw
+    - PocketSVG
     - SVGParser
     - SwiftSVG
     - SWXMLHash
@@ -37,11 +40,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   Macaw: 4a931baf9a9826b06d0d8ecf300014c962ab9d50
+  PocketSVG: 5e0ff20c8a661586b2f2c295cd18b3e8f06de552
   SVGKit: 3c8468aab0026048532a3b27a0c81cdd939f0649
   SVGParser: 5649edaeb2dd79489a1752aa344cbc7375470769
   SwiftSVG: ca7f64e403b8ea7ea8eba8c823b83ba4a059834c
   SWXMLHash: 9d851ed3edf48ec2bd0db98f0cda0ad4136d75e3
 
-PODFILE CHECKSUM: a953cddc480b80b59435ff56dd4952c100d58da1
+PODFILE CHECKSUM: 3e16150b9e732073b21325fe3e0f89a0eb2fac7d
 
 COCOAPODS: 1.10.0

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		D360548C2726EDDF00E212F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D360548A2726EDDF00E212F6 /* Main.storyboard */; };
 		D360548E2726EDE100E212F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D360548D2726EDE100E212F6 /* Assets.xcassets */; };
 		D36054912726EDE100E212F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D360548F2726EDE100E212F6 /* LaunchScreen.storyboard */; };
+		D360A07B272A9A8A00E212F6 /* good_auto_24.svg in Resources */ = {isa = PBXBuildFile; fileRef = D360A07A272A9A8700E212F6 /* good_auto_24.svg */; };
+		D360A07D272A9A9600E212F6 /* bad_auto_24.svg in Resources */ = {isa = PBXBuildFile; fileRef = D360A07C272A9A9600E212F6 /* bad_auto_24.svg */; };
+		D360B9C9272BE13900E212F6 /* DoneDark.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D360B9C8272BE13800E212F6 /* DoneDark.pdf */; };
+		D360B9CB272BE1A700E212F6 /* cat-clip-art-34.png in Resources */ = {isa = PBXBuildFile; fileRef = D360B9CA272BE1A700E212F6 /* cat-clip-art-34.png */; };
+		D39452532731A7660011F1FB /* car.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39452522731A7660011F1FB /* car.svg */; };
+		D39452552731A7C10011F1FB /* small.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39452542731A7C10011F1FB /* small.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		D360548D2726EDE100E212F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36054902726EDE100E212F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36054922726EDE100E212F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D360A07A272A9A8700E212F6 /* good_auto_24.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = good_auto_24.svg; sourceTree = "<group>"; };
+		D360A07C272A9A9600E212F6 /* bad_auto_24.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bad_auto_24.svg; sourceTree = "<group>"; };
+		D360B9C8272BE13800E212F6 /* DoneDark.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DoneDark.pdf; sourceTree = "<group>"; };
+		D360B9CA272BE1A700E212F6 /* cat-clip-art-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat-clip-art-34.png"; sourceTree = "<group>"; };
+		D39452522731A7660011F1FB /* car.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = car.svg; sourceTree = "<group>"; };
+		D39452542731A7C10011F1FB /* small.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +68,6 @@
 				590F75F6B789B598EF5D8883 /* Pods-SVGTest.debug.xcconfig */,
 				758A5FDB9B81F11FA76912BB /* Pods-SVGTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,8 +92,14 @@
 		D36054832726EDDF00E212F6 /* SVGTest */ = {
 			isa = PBXGroup;
 			children = (
+				D360B9CA272BE1A700E212F6 /* cat-clip-art-34.png */,
+				D360B9C8272BE13800E212F6 /* DoneDark.pdf */,
+				D39452522731A7660011F1FB /* car.svg */,
+				D360A07C272A9A9600E212F6 /* bad_auto_24.svg */,
+				D360A07A272A9A8700E212F6 /* good_auto_24.svg */,
 				D36054842726EDDF00E212F6 /* AppDelegate.swift */,
 				D36054862726EDDF00E212F6 /* SceneDelegate.swift */,
+				D39452542731A7C10011F1FB /* small.svg */,
 				D36054882726EDDF00E212F6 /* ViewController.swift */,
 				D360548A2726EDDF00E212F6 /* Main.storyboard */,
 				D360548D2726EDE100E212F6 /* Assets.xcassets */,
@@ -151,8 +168,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D360B9C9272BE13900E212F6 /* DoneDark.pdf in Resources */,
+				D39452552731A7C10011F1FB /* small.svg in Resources */,
+				D360B9CB272BE1A700E212F6 /* cat-clip-art-34.png in Resources */,
+				D360A07B272A9A8A00E212F6 /* good_auto_24.svg in Resources */,
 				D36054912726EDE100E212F6 /* LaunchScreen.storyboard in Resources */,
+				D39452532731A7660011F1FB /* car.svg in Resources */,
 				D360548E2726EDE100E212F6 /* Assets.xcassets in Resources */,
+				D360A07D272A9A9600E212F6 /* bad_auto_24.svg in Resources */,
 				D360548C2726EDDF00E212F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

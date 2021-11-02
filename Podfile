@@ -11,4 +11,5 @@ target 'SVGTest' do
   pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
   pod 'SwiftSVG', '~> 2.0'
   pod 'SVGParser'
+  pod 'PocketSVG', '~> 2.6'
 end
